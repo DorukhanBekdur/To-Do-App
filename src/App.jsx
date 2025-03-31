@@ -27,17 +27,34 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-      <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4 text-center text-blue-600">
-          To-Do List 📝
-        </h1>
-        <TodoForm addTodo={addTodo} />
-        <TodoList
-          todos={todos}
-          toggleComplete={toggleComplete}
-          deleteTodo={deleteTodo}
-        />
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-blue-900 to-black text-white px-6 py-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
+          <h2 className="text-xl font-bold mb-4 text-center">📝 Yeni Görev</h2>
+          <TodoForm addTodo={addTodo} />
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
+          <h2 className="text-xl font-bold mb-4 text-center">
+            📋 Aktif Görevler
+          </h2>
+          <TodoList
+            todos={todos.filter((t) => !t.completed)}
+            toggleComplete={toggleComplete}
+            deleteTodo={deleteTodo}
+          />
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
+          <h2 className="text-xl font-bold mb-4 text-center">
+            ✅ Tamamlananlar
+          </h2>
+          <TodoList
+            todos={todos.filter((t) => t.completed)}
+            toggleComplete={toggleComplete}
+            deleteTodo={deleteTodo}
+          />
+        </div>
       </div>
     </div>
   );
