@@ -18,7 +18,7 @@ function TodoForm({ addTodo }) {
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Yeni görev ekle..."
+        placeholder="Add New Task..."
         className="w-full px-4 py-2 rounded-xl bg-white/10 backdrop-blur-sm text-white placeholder:text-gray-400 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-800 shadow-inner transition"
       />
 
@@ -26,7 +26,7 @@ function TodoForm({ addTodo }) {
         type="submit"
         className="bg-gradient-to-r from-blue-800 via-indigo-800 to-blue-500 text-white font-semibold px-6 py-2 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-200 cursor-pointer"
       >
-        Ekle
+        Add
       </button>
     </form>
   );

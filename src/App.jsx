@@ -30,13 +30,13 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-blue-900 to-black text-white px-6 py-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
-          <h2 className="text-xl font-bold mb-4 text-center">📝 Yeni Görev</h2>
+          <h2 className="text-xl font-bold mb-4 text-center">📝 New Task</h2>
           <TodoForm addTodo={addTodo} />
         </div>
 
         <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
           <h2 className="text-xl font-bold mb-4 text-center">
-            📋 Aktif Görevler
+            📋 Active Tasks
           </h2>
           <TodoList
             todos={todos.filter((t) => !t.completed)}
@@ -46,9 +46,7 @@ function App() {
         </div>
 
         <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg">
-          <h2 className="text-xl font-bold mb-4 text-center">
-            ✅ Tamamlananlar
-          </h2>
+          <h2 className="text-xl font-bold mb-4 text-center">✅ Completed</h2>
           <TodoList
             todos={todos.filter((t) => t.completed)}
             toggleComplete={toggleComplete}

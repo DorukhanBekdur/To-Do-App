@@ -4,7 +4,7 @@ function TodoList({ todos, toggleComplete, deleteTodo }) {
   return (
     <div className="space-y-2">
       {todos.length === 0 ? (
-        <p className="text-center text-gray-500">Henüz görev yok</p>
+        <p className="text-center text-gray-500">No task yet.</p>
       ) : (
         todos.map((todo) => (
           <TodoItem
