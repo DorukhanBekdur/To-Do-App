@@ -27,9 +27,8 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-blue-900 to-black text-white px-6 py-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-        {/* New Task */}
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-indigo-900 via-blue-900 to-black text-white">
+      <div className="flex-grow px-6 py-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
         <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg min-h-[200px]">
           <h2 className="text-xl font-bold mb-4 text-center">📝 New Task</h2>
           <TodoForm addTodo={addTodo} />
@@ -55,6 +54,10 @@ function App() {
           />
         </div>
       </div>
+
+      <footer className="text-center text-sm text-white/40 py-4">
+        Designed & developed by Dorukhan Bekdur – {new Date().getFullYear()}
+      </footer>
     </div>
   );
 }
