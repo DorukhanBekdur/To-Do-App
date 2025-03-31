@@ -36,7 +36,6 @@ This project focuses on a clean UI, smooth user experience, and a dark-themed la
 - **React** – Frontend JavaScript library  
 - **Tailwind CSS** – Utility-first styling  
 - **Vite** – Fast build tool for React  
-- *(Optional)* React Icons for UI icons
 
 ---
 
@@ -49,4 +48,9 @@ git clone https://github.com/DorukhanBekdur/To-Do-App.git
 cd To-Do-App
 npm install
 npm run dev
+```
+## 🙌 Author
 
+**Dorukhan Bekdur**  
+💼 [GitHub](https://github.com/DorukhanBekdur)  
+📧 [Email](mailto:dorukhanbekdur@gmail.com)
