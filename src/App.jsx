@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -13,6 +14,18 @@ function App() {
     setTodos([newTodo, ...todos]);
   };
 
+  const toggleComplete = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
       <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
@@ -20,6 +33,11 @@ function App() {
           To-Do List 📝
         </h1>
         <TodoForm addTodo={addTodo} />
+        <TodoList
+          todos={todos}
+          toggleComplete={toggleComplete}
+          deleteTodo={deleteTodo}
+        />
       </div>
     </div>
   );
